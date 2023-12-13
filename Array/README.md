@@ -21,5 +21,3 @@ The `insertionInArray.c` file includes code examples for various insertion opera
 The `deletionInArray.c` file includes code examples for various deletion operations in arrays, covering cases like deletion at the beginning, end, or a specific index.
 
 Feel free to explore the code implementations in each file for a better understanding of array operations.
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](../../LICENSE)
