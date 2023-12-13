@@ -1,3 +1,17 @@
+/*
+    Linked List Deletion Operations in C
+
+    This program demonstrates various deletion operations on a singly linked list.
+
+    Study Material:
+    - Case 1: Delete the first node in the linked list
+    - Case 2: Delete a node at a specified index
+    - Case 3: Delete the last node in the linked list
+    - Case 4: Delete a node by a given value
+
+    Note: The program creates a linked list with five nodes and performs deletion operations.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -34,10 +48,10 @@ void deleteFirst(Node **head)
 
     // Save the current head node
     Node *ptr = *head;
-    
+
     // Update the head to the next node
     *head = (*head)->next;
-    
+
     // Free the memory of the deleted node
     free(ptr);
 
@@ -89,7 +103,7 @@ void deleteAtIndex(Node **head, int index)
 
     // Update pointers to skip the node to be deleted
     p->next = q->next;
-    
+
     // Free the memory of the deleted node
     free(q);
 
@@ -119,7 +133,7 @@ void deleteAtLast(Node **head)
 
     // Update the second-to-last node to point to NULL, effectively removing the last node
     p->next = NULL;
-    
+
     // Free the memory of the deleted last node
     free(q);
 
@@ -152,7 +166,7 @@ void deleteByValue(Node **head, int value)
     {
         // Update pointers to skip the node with the specified value
         p->next = q->next;
-        
+
         // Free the memory of the deleted node
         free(q);
 
