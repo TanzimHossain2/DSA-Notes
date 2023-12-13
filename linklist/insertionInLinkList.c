@@ -1,6 +1,31 @@
+/*
+    Linked List Operations in C
+
+    This program provides a menu-driven interface to perform various operations on a singly linked list.
+
+    Study Material:
+    - The program allows insertion at the beginning, end, a specific index, or after a given node.
+    - It displays the total number of nodes and the linked list itself.
+    - The program continuously prompts the user for operations until they choose to exit.
+
+    Functions:
+    - traversal: Traverse and print the elements of the linked list.
+    - insertAtBeginning: Insert a new node at the beginning of the linked list.
+    - insertAtEnd: Insert a new node at the end of the linked list.
+    - insertAtIndex: Insert a new node at a specific index in the linked list.
+    - insertAfterNode: Insert a new node after a specific node in the linked list.
+    - totalNodes: Display the total number of nodes in the linked list.
+    - makeClean: Free the memory occupied by the linked list.
+    - handleUserChoice: Handle the user's choice and perform corresponding operations.
+    - mainLoop: Main menu loop for user interaction.
+
+    Note: Make sure to free memory using the makeClean function before exiting.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
+// Node structure for the linked list
 struct Node
 {
     int data;
@@ -9,10 +34,10 @@ struct Node
 
 typedef struct Node Node;
 
+// Function to traverse and print the elements of the linked list
 void traversal(Node *ptr)
 {
     printf("--------------------\n");
-    // Traversing the linked list and printing each element
     while (ptr != NULL)
     {
         printf("Elements are: %d\n", ptr->data);
@@ -21,6 +46,7 @@ void traversal(Node *ptr)
     printf("--------------------\n");
 }
 
+// Function to insert a new node at the beginning of the linked list
 void insertAtBeginning(Node **head, int data)
 {
     Node *ptr = (Node *)malloc(sizeof(Node));
@@ -31,6 +57,7 @@ void insertAtBeginning(Node **head, int data)
     traversal(*head);
 }
 
+// Function to insert a new node at the end of the linked list
 void insertAtEnd(Node *head, int data)
 {
     Node *ptr = (Node *)malloc(sizeof(Node));
@@ -47,6 +74,7 @@ void insertAtEnd(Node *head, int data)
     traversal(head);
 }
 
+// Function to insert a new node at a specific index in the linked list
 void insertAtIndex(Node *head, int data, int index)
 {
     Node *ptr = (Node *)malloc(sizeof(Node));
@@ -73,6 +101,7 @@ void insertAtIndex(Node *head, int data, int index)
     traversal(head);
 }
 
+// Function to insert a new node after a specific node in the linked list
 void insertAfterNode(Node *head, Node *prevNode, int data)
 {
     if (prevNode == NULL)
@@ -90,6 +119,7 @@ void insertAfterNode(Node *head, Node *prevNode, int data)
     traversal(head);
 }
 
+// Function to display the total number of nodes in the linked list
 void totalNodes(Node *head)
 {
     int count = 0;
@@ -102,6 +132,7 @@ void totalNodes(Node *head)
     printf("Total nodes are: %d\n", count);
 }
 
+// Function to free the memory occupied by the linked list
 void makeClean(Node **head)
 {
     Node *temp;
@@ -113,6 +144,7 @@ void makeClean(Node **head)
     }
 }
 
+// Function to handle user's choice and perform corresponding operations
 void handleUserChoice(Node **head, char choice)
 {
     int data, index;
@@ -172,6 +204,7 @@ void handleUserChoice(Node **head, char choice)
     }
 }
 
+// Function for the main menu loop
 void mainLoop(Node **head)
 {
     char choice;
@@ -197,8 +230,9 @@ void mainLoop(Node **head)
 
 int main()
 {
-    Node *head = NULL; 
+    Node *head = NULL;
 
+    // Start the main loop for user interaction
     mainLoop(&head);
 
     // Free memory before exiting
