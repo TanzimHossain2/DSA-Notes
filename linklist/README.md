@@ -7,6 +7,7 @@ This folder contains C code implementations related to linked lists in Data Stru
 - **Linklist.c:** Basic implementation of a singly linked list.
 - **insertionInLinkList.c:** Code demonstrating various insertion operations in linked lists.
 - **deletionInLinkList.c:** Code demonstrating various deletion operations in linked lists.
+- **CircularLinkedList.c:** Code illustrating the implementation of a circular linked list.
 
 ## Basic Linked List Implementation
 
@@ -20,5 +21,8 @@ The `insertionInLinkList.c` file includes code examples for various insertion op
 
 The `deletionInLinkList.c` file includes code examples for various deletion operations in linked lists. Cases covered include deleting the first node, deleting at a specific index, deleting the last node, and deleting a node by a given value.
 
-Feel free to explore the code implementations in each file for a better understanding of linked list operations.
+## Circular Linked List
 
+The `CircularLinkedList.c` file illustrates the concept of a circular linked list. It creates a circular linked list with nodes, demonstrates traversal, and includes an example of inserting a node at the beginning.
+
+Feel free to explore the code implementations in each file for a better understanding of linked list operations.
