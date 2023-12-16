@@ -1,23 +1,23 @@
 /** ============================================================================
-=                Stack Operations in C (Push, Pop, Peek )                   =
+=                         Stack Operations in C (Push, Pop, Peek)                  =
 
 Push():
-- 1st check if the stack is full
-- if not full, then increment the top and add the element to the top position. like this:
+- Checks if the stack is full.
+- If not full, increments the top and adds the element to the top position.
     top = top + 1
     stack[top] = element
-- return nothing
+- Returns nothing
 
-            ---------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Pop():
-- 1st check if the stack is empty
-- if not empty, then remove the element from the top position and decrement the top. like this:
+- Checks if the stack is empty.
+- If not empty, removes the element from the top position and decrements the top.
     element = stack[top]
     top = top - 1
-- return the element
+- Returns the element
 
-            ---------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Peek():
 - (top-i+1)
@@ -32,7 +32,7 @@ Explanation for Peek():
 #include<stdio.h> 
 #include<stdlib.h>
 
-//creating a stack
+// Creating a stack
 struct stack {
     int size;
     int top;
@@ -40,7 +40,7 @@ struct stack {
 };
 typedef struct stack Stack;
 
-//traversal function
+// Traversal function
 void traversal(Stack *ptr) {
     printf("[");
     for(int i = 0; i <= ptr->top; i++) {
@@ -49,77 +49,66 @@ void traversal(Stack *ptr) {
     printf("]\n");
 }
 
-//case 1: check if the stack is empty
+// Case 1: Check if the stack is empty
 int isEmpty(Stack *ptr) {
-    if(ptr->top == -1) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
+    return ptr->top == -1;
 }
 
-//case 2: check if the stack is full
+// Case 2: Check if the stack is full
 int isFull(Stack *ptr) {
-    if(ptr->top == ptr->size - 1) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
+    return ptr->top == ptr->size - 1;
 }
 
-//case 3: push an element into the stack
-void push(Stack * ptr, int val){
+// Case 3: Push an element into the stack
+void push(Stack *ptr, int val){
     if(isFull(ptr)) {
         printf("Stack Overflow! Cannot push %d to the stack\n", val);
     }
     else {
         ptr->top++;
-        ptr->arr[ptr->top] = val; //adding the element to the top position
+        ptr->arr[ptr->top] = val; // Adding the element to the top position
     }
 }
 
-//case 4: pop an element from the stack
-int pop(Stack * ptr) {
+// Case 4: Pop an element from the stack
+int pop(Stack *ptr) {
     if(isEmpty(ptr)) {
         printf("Stack Underflow! Cannot pop from the stack\n");
         return -1;
-    }else {
-        int val = ptr->arr[ptr->top]; //storing the top element in a variable
+    } else {
+        int val = ptr->arr[ptr->top]; // Storing the top element in a variable
         ptr->top--; 
         return val;
     }
 }
 
-//case 5: peek an element from the stack
-int peek(Stack *ptr, int indx){ //indx is the position from the top
+// Case 5: Peek an element from the stack
+int peek(Stack *ptr, int indx){ // indx is the position from the top
     int arrIndex = ptr->top - indx + 1;
     if(arrIndex < 0 || arrIndex > ptr->top ){
         printf("Invalid position\n");
         return -1;
-    }
-    else {
-        return ptr->arr[arrIndex]; //returning the element at the given position
+    } else {
+        return ptr->arr[arrIndex]; // Returning the element at the given position
     }
 }
 
 int main() {
-    //creating a stack in heap memory 
+    // Creating a stack in heap memory 
     Stack *s = (Stack *)malloc(sizeof(Stack));
 
-    //initializing the stack
+    // Initializing the stack
     s->size = 10;
-    s->top = -1; //stack is empty
-    s->arr = (int *)malloc(s->size * sizeof(int)); //creating an array in heap memory
+    s->top = -1; // Stack is empty
+    s->arr = (int *)malloc(s->size * sizeof(int)); // Creating an array in heap memory
 
-    //check Memory allocation was successful or not
+    // Check if memory allocation was successful or not
     if(s->arr == NULL) {
         printf("Memory allocation failed\n");
         return 1;
     }
 
-    //pushing elements into the stack
+    // Pushing elements into the stack
     push(s, 10);
     push(s, 20);
     push(s, 30);
@@ -127,31 +116,30 @@ int main() {
     push(s, 50);
     push(s, 60);
 
-    //after pushing the array
+    // After pushing the array
     printf("After pushing \n");
     traversal(s);
 
-    //popping elements from the stack
+    // Popping elements from the stack
     printf("\n");
     printf("Popped %d from the stack\n", pop(s));
     printf("Popped %d from the stack\n", pop(s));
 
-    //after popping the array
+    // After popping the array
     printf("\n After popping \n");
     traversal(s);
 
-    //peeking an element from the stack
+    // Peeking an element from the stack
     printf("\n");
-    printf("Peeked %d from the stack\n", peek(s, 1)); //peeking the 1st element from the top
+    printf("Peeked %d from the stack\n", peek(s, 1)); // Peeking the 1st element from the top
 
-    //printing all the elements of the stack
+    // Printing all the elements of the stack
     printf("\n");
-    for(int i = 1; i <= s->top + 1; i++)
-    {
+    for(int i = 1; i <= s->top + 1; i++) {
         printf("The value at position %d is %d\n", i, peek(s, i));
     }
 
-    // free the allocated memory
+    // Free the allocated memory
     free(s->arr);
     free(s);
     return 0;
