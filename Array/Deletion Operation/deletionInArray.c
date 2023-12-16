@@ -1,17 +1,16 @@
-/*
+/* ======================================================================================
     Array Deletion in C
 
     This program demonstrates the deletion of an element at a specified index
-    in an array. It includes a function for array traversal and a function for
-    deleting an element at a given index.
+    in an array. It includes functions for array traversal and deletion.
 
     Functions:
-    - display: Displays the elements of an array.
-    - indDeletion: Deletes an element at a specified index in the array.
+    - displayArray: Displays the elements of an array.
+    - deleteAtIndex: Deletes an element at a specified index in the array.
 
     Note: The array has a fixed capacity of 100 elements.
+====================================================================================== */
 
-*/
 
 #include <stdio.h>
 
