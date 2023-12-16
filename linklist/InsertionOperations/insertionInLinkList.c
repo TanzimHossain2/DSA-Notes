@@ -1,4 +1,4 @@
-/*
+/* =====================================================================
     Linked List Operations in C
 
     This program provides a menu-driven interface to perform various operations on a singly linked list.
@@ -20,7 +20,7 @@
     - mainLoop: Main menu loop for user interaction.
 
     Note: Make sure to free memory using the makeClean function before exiting.
-*/
+=====================================================================*/
 
 #include <stdio.h>
 #include <stdlib.h>

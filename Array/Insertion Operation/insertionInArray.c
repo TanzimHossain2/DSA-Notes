@@ -1,24 +1,20 @@
-/*
+/*=========================================================================
     Array Insertion in C
 
     This program demonstrates the insertion of an element at a specified index
-    in an array. It includes a function for array traversal and a function for
-    inserting an element at a given index.
+    in an array. It includes functions for array traversal and insertion.
 
     Functions:
     - display: Displays the elements of an array.
     - indInsertion: Inserts an element at a specified index in the array.
-
-    Note: The array has a fixed capacity of 100 elements.
-
-*/
+=========================================================================*/
 
 #include <stdio.h>
 
 // Function to display the elements of an array
 void display(int arr[], int n)
 {
-    // Code for Traversal
+    // Traversal code
     printf("Array Elements:\n");
     for (int i = 0; i < n; i++)
     {
@@ -67,7 +63,7 @@ int main()
 
     // Insert the element at the specified index
     indInsertion(arr, size, element, 100, index);
-    
+
     // Update the size after insertion
     size += 1;
 

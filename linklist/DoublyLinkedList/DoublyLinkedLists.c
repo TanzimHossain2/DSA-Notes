@@ -1,5 +1,20 @@
 // Doubly Linked List Implementation in C
 
+/*=====================================================================
+    This program demonstrates the basic implementation of a doubly linked list in C.
+    It includes functions for traversing the doubly linked list and printing its elements.
+
+    Functions:
+    - traversal: Traverse and print the elements of the doubly linked list.
+    - insertAtBeginning: Insert a new node at the beginning of the doubly linked list.
+    - insertAtEnd: Insert a new node at the end of the doubly linked list.
+ 
+=====================================================================*/
+
+// Including necessary header files
+#include <stdio.h>
+#include <stdlib.h>
+
 // Structure representing a node in the doubly linked list
 struct Node
 {
@@ -13,7 +28,7 @@ typedef struct Node Node;
 // Function to traverse and print the elements of the doubly linked list
 void traversal(Node *head)
 {
-    // Note: This function traverses the doubly linked list and prints its elements.
+    // This function traverses the doubly linked list and prints its elements.
     // It starts from the head and moves to the end of the list.
     printf("--------------------\n");
     while (head != NULL)
@@ -27,18 +42,22 @@ void traversal(Node *head)
 // Function to insert a new node at the beginning of the doubly linked list
 void insertAtBeginning(Node **head, int data)
 {
-    // Note: This function inserts a new node at the beginning of the doubly linked list.
+    // This function inserts a new node at the beginning of the doubly linked list.
     // It creates a new node, sets its data, and adjusts pointers accordingly.
+
+    // Allocate memory for the new node
     Node *ptr = (Node *)malloc(sizeof(Node));
     ptr->data = data;
     ptr->next = *head;
     ptr->prev = NULL;
 
+    // Update the previous pointer of the existing head
     if (*head != NULL)
     {
         (*head)->prev = ptr;
     }
 
+    // Update the head to the new node
     *head = ptr;
 
     // Printing the elements after insertion
@@ -49,18 +68,22 @@ void insertAtBeginning(Node **head, int data)
 // Function to insert a new node at the end of the doubly linked list
 void insertAtEnd(Node *head, int data)
 {
-    // Note: This function inserts a new node at the end of the doubly linked list.
+    // This function inserts a new node at the end of the doubly linked list.
     // It creates a new node, sets its data, and adjusts pointers accordingly.
+
+    // Allocate memory for the new node
     Node *ptr = (Node *)malloc(sizeof(Node));
     ptr->data = data;
     ptr->next = NULL;
 
+    // Traverse to the last node
     Node *temp = head;
     while (temp->next != NULL)
     {
         temp = temp->next;
     }
 
+    // Update pointers to include the new node
     temp->next = ptr;
     ptr->prev = temp;
 

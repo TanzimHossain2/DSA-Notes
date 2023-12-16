@@ -1,6 +1,6 @@
-// Circular Linked List
+// Circular Linked List Implementation in C
 
-/*
+/*=====================================================================
     This C program illustrates the concept of a circular linked list.
     In a circular linked list, the last node points back to the first node, forming a loop.
 
@@ -29,7 +29,7 @@
 
     This documentation serves as a guide for learning and revising circular linked list concepts, making it useful for exams
     and understanding the code's functionality.
-*/
+===================================================================== */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -58,7 +58,7 @@ void traversal(Node *head)
     printf("--------------------\n");
     do
     {
-        printf("Elements are: %d\n", ptr->data);
+        printf("Element: %d\n", ptr->data);
         ptr = ptr->next;
     } while (ptr != head);
 
@@ -68,21 +68,23 @@ void traversal(Node *head)
 // Function to insert a new node at the beginning of the circular linked list
 void insertAtFirst(Node **head, int data)
 {
+    // Creating a new node
     Node *ptr = (Node *)malloc(sizeof(Node));
     ptr->data = data;
-    Node *p = (*head)->next;
 
+    // Finding the last node in the circular linked list
+    Node *p = (*head)->next;
     while (p->next != *head)
     {
         p = p->next;
     }
 
-    // At this point, p points to the last node of this circular linked list
+    // Connecting the new node to the beginning and updating the head
     p->next = ptr;
     ptr->next = *head;
     *head = ptr;
 
-    // Printing the elements
+    // Printing the elements after insertion
     printf("Elements after insertion at the beginning\n");
     traversal(*head);
 }
@@ -96,6 +98,7 @@ int main()
     Node *fourth = (Node *)malloc(sizeof(Node));
     Node *fifth = (Node *)malloc(sizeof(Node));
 
+    // Setting data and pointers for each node
     head->data = 7;
     head->next = second;
 

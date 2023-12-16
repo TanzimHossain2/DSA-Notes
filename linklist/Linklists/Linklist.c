@@ -1,4 +1,4 @@
-/*
+/*=====================================================================
     Linked List Implementation in C
 
     This program demonstrates the basic implementation of a singly linked list in C.
@@ -8,8 +8,9 @@
     - LinkListTraversal: Traverse and print the elements of the linked list.
     - traversal: Traverse and print the elements of the linked list.
 
-    Note: The linked list is created with four nodes, and the traversal function prints the elements.
-*/
+    Note: The program creates a linked list with four nodes and prints its elements.
+
+=====================================================================*/
 
 #include <stdio.h>
 #include <stdlib.h>
