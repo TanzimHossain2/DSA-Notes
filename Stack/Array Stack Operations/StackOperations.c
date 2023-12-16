@@ -27,6 +27,16 @@ Explanation for Peek():
 - The formula used is (top-i+1), where 'i' represents the position from the top.
 - For example, peek(s, 1) would retrieve the top element, peek(s, 2) the second element from the top, and so on.
 
+-------------------------------------------------------------------------------
+
+StackTop():
+- Returns the top element of the stack.
+
+-------------------------------------------------------------------------------
+
+StackBottom():
+- Returns the bottom element of the stack.
+
 ============================================================================ */
 
 #include<stdio.h> 
@@ -93,6 +103,17 @@ int peek(Stack *ptr, int indx){ // indx is the position from the top
     }
 }
 
+//case 6: stack top
+int stackTop(Stack *ptr){
+    return ptr->arr[ptr->top]; // Returning the top element
+}
+
+//case 7: stack bottom
+int stackBottom(Stack *ptr){
+    return ptr->arr[0]; // Returning the bottom element
+}
+
+
 int main() {
     // Creating a stack in heap memory 
     Stack *s = (Stack *)malloc(sizeof(Stack));
@@ -138,6 +159,12 @@ int main() {
     for(int i = 1; i <= s->top + 1; i++) {
         printf("The value at position %d is %d\n", i, peek(s, i));
     }
+
+    // Printing the top and bottom elements of the stack
+    printf("\n");
+    printf("The top element of the stack is %d\n", stackTop(s));
+    printf("The bottom element of the stack is %d\n", stackBottom(s));
+
 
     // Free the allocated memory
     free(s->arr);
