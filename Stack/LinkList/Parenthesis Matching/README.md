@@ -4,13 +4,13 @@ When crafting an expression with brackets, it's essential to ensure the proper o
 
 **Mathematical Expression:**
 
-```math
+```text
 ((3x + 4y) * (5x + 7y)) + (2x + y)
 ```
 
 **Brackets-only Expression:**
 
-```math
+```text
 ( ( ) ( ) ) + ( )
 ```
 
@@ -21,7 +21,7 @@ When crafting an expression with brackets, it's essential to ensure the proper o
 
 **Balanced and Unbalanced Expressions:**
 
-```math
+```text
 | Balanced Expression | Unbalanced Expression |
 |---------------------|-----------------------|
 |       (a + b)       |         (a + b        |
