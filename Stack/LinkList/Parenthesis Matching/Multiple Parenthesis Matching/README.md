@@ -1,6 +1,4 @@
-Certainly! I'll enhance the pseudocode, fix the image path, and create a flowchart for better clarity.
-
-### Multiple Parenthesis Matching Problem
+## Multiple Parenthesis Matching Problem
 
 When constructing an expression with brackets, it is crucial to ensure the correct arrangement of brackets, guaranteeing that each opening bracket corresponds to its respective closing bracket.
 
