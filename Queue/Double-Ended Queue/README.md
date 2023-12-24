@@ -12,8 +12,9 @@ In input-restricted queue, insertion operation can be performed at only one end,
 In this type of DE-Queue, we can insert elements from only one side (Rear), Insertion from Front not allowed, and delete elements from both sides (Front + Rear).
 
 <div style="background-color: white; display: inline-block;">
-    <img src="https://static.javatpoint.com/ds/images/ds-deque2.png" alt="Insertion at the Front End" style="background-color: white;">
+    <img src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1673876053432-double%20ended%20queue%20in%20data%20structure2.png" alt="Insertion at the Front End" style="background-color: white;">
 </div>
+
 
 ### 2. Restricted Output DE-Queue
 In output-restricted queue, deletion operation can be performed at only one end, while insertion can be performed from both ends.
@@ -76,7 +77,7 @@ In this operation, the element is deleted from the rear end of the queue. Before
 - Else, decrement the rear by 1 (or, rear = rear -1).
 
 <div style="background-color: white; display: inline-block;">
-    <img src="https://static.javatpoint.com/ds/images/ds-deque7.png" alt="Deletion at the Rear End" style="background-color: white;">
+    <img src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1673876053443-double%20ended%20queue%20in%20data%20structure7.png" alt="Deletion at the Rear End " style="background-color: white;">
 </div>
 
 ## Time and Space Complexity
