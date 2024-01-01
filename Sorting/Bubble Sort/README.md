@@ -68,7 +68,7 @@ In the 4th pass, no comparisons are needed as the array is already sorted, so th
 
 **Note**: Total comparisons are calculated by `Array length - 1`. Total possible swaps are calculated by `Array length - 1 - pass`.
 
-- Total Number of Comparisons = `n(n - 1)/2 = O(n^2)`. This is also the same for total possible swaps.
+- Total Number of Comparisons = `n(n - 1)/2 = O(n^2)`. This is also the same for total possible swaps. Example: `5(5 - 1)/2 = 10`, for length 5 array needs 10 comparisons and 10 swaps.
 
 - Stable sort algorithm; the order is the same as the input array.
 
