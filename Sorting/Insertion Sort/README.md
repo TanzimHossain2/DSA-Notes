@@ -74,11 +74,7 @@ Consider an unsorted array `[5, 1, 4, 0, 9]` sorted in ascending order using Ins
 
 ### Another Example Visualization of How Insertion Sort Works Step by Step
 
-<div style="padding: 20px; border-radius: 10px; overflow: hidden; position: relative;">
-    <p><strong>Another Example Visualization</strong></p>
-    <div style="position: absolute; top: 0; left: 0; width: 80%; height: 100%; background-color: white; z-index: -1;"></div>
-    <img src="https://www.studytonight.com/data-structures/images/basic-insertion-sort.png" alt="Insertion Sort" style="width: 80%; border: 1px solid #ddd; border-radius: 5px; padding: 5px;">
-</div>
+![Insertion Sort](https://miro.medium.com/v2/resize:fit:818/1*_NOe6jL9veyR4yAyf85dzA.png)
 
 ## Time Complexity of Insertion Sort Algorithm
 
