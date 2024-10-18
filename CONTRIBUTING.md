@@ -9,7 +9,7 @@ Welcome to the DSA-Practice repository! Your contributions are highly valued, wh
 1. Fork the Repository.
 2. Clone your forked repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/DSA-Practice.git
+   git clone https://github.com/TanzimHossain2/DSA-Learning-Notes
    ```
 
 3. Create a new branch for your contribution:
